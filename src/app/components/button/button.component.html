@@ -1,0 +1,9 @@
+<button
+    class="block font-light font-DM px-6 py-1 rounded-xl text-lg w-full min-w-28"
+    [ngClass]="{
+        'bg-easy-blue text-white': type === 'primary',
+        'bg-white text-easy-blue': type === 'secondary'
+    }"
+>
+    {{ content }}
+</button>

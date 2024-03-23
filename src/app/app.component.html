@@ -1,5 +1,8 @@
-<div class="w-full p-4">
-  <p class="text-blue-400">Hola mundo</p>
+@if(router.url !== '/'){
+  <div class="my-4 text-center text-yellow-800 font-extrabold font-mono">Aqui ira el navbar por ejemplo</div>
+}
+
+<div class="w-full h-full">
+  <router-outlet />
 </div>
 
-<router-outlet />
