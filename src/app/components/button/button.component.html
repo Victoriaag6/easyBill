@@ -1,9 +1,10 @@
 <button
-    class="block font-light font-DM px-6 py-1 rounded-xl text-lg w-full min-w-28"
+    class="block font-light font-DM px-6 py-1 rounded-xl text-lg w-full min-w-28 hover:opacity-65 hover:cursor-pointer"
     [ngClass]="{
         'bg-easy-blue text-white': type === 'primary',
         'bg-white text-easy-blue': type === 'secondary'
     }"
+    (click)="navigate()"
 >
     {{ content }}
 </button>

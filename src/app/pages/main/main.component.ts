@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Application } from '@splinetool/runtime';
 import { ButtonComponent } from '../../components/button/button.component';
+import { RoutesNavigation } from '../../../enums';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,8 @@ import { ButtonComponent } from '../../components/button/button.component';
 export class MainComponent implements AfterViewInit {
 
   @ViewChild('canvas3d') canvas3d: any;
+
+  routes = RoutesNavigation
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
