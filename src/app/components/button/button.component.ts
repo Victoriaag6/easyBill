@@ -18,7 +18,6 @@ export class ButtonComponent {
   constructor(public router: Router) {}  
 
   navigate() {
-    console.log(this.route)
     if (this.route) {
       this.router.navigate([this.route]);
     }
