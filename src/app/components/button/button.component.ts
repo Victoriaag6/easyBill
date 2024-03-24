@@ -17,6 +17,7 @@ export class ButtonComponent {
   @Input() action:Function|null = null
 
   constructor(public router: Router) {}  
+  routes = RoutesNavigation
 
   navigate() {
     if (this.route) {
