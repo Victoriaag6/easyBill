@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=DM%20Sans');
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=DM%20Sans");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    transition: all 0.3s ease-in-out;
+* {
+  transition: all 0.2s ease-in-out;
 }

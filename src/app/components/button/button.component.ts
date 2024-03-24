@@ -14,6 +14,7 @@ export class ButtonComponent {
   @Input() content = '';
   @Input() type: ButtonTypes = 'primary';
   @Input() route: RoutesNavigation|null = null
+  @Input() action:Function|null = null
 
   constructor(public router: Router) {}  
 
@@ -21,5 +22,12 @@ export class ButtonComponent {
     if (this.route) {
       this.router.navigate([this.route]);
     }
+  }
+
+  onClick() {
+    if (this.action) {
+      this.action();
+    }
+    this.navigate();
   }
 }
