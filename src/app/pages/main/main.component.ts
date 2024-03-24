@@ -20,8 +20,6 @@ import { LogoComponent } from '../../components/logo/logo.component';
 })
 export class MainComponent implements AfterViewInit {
   @ViewChild('canvas3d') canvas3d: any;
-  isLoadingCanvas = true;
-
   routes = RoutesNavigation;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
@@ -32,9 +30,5 @@ export class MainComponent implements AfterViewInit {
       // app.load('https://prod.spline.design/5PTlTfYEOzWPR1q4/scene.splinecode');
       app.load('../../../assets/scene.splinecode')
     }
-
-    setTimeout(() => {
-      this.isLoadingCanvas = false; 
-    }, 500);
   }
 }
