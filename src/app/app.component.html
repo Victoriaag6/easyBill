@@ -1,8 +1,10 @@
-@if(router.url !== '/'){
-  <div class="my-4  text-yellow-800 font-extrabold font-mono absolute w-full text-center">Aqui ira el navbar por ejemplo</div>
+@if(!nonSidebar.includes(router.url)  ){
+ <!-- Aqui colocaremos el sidebar -->
+ <p>Hola mundo</p>
 }
 
-<div class="w-full h-full">
+<div class="w-full h-screen flex-col flex justify-between box-border">
   <router-outlet />
+  <app-footer class="absolute self-center bottom-0 py-3"/>
 </div>
 

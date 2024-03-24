@@ -29,7 +29,8 @@ export class MainComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       const app = new Application(this.canvas3d.nativeElement);
-      app.load('https://prod.spline.design/5PTlTfYEOzWPR1q4/scene.splinecode');
+      // app.load('https://prod.spline.design/5PTlTfYEOzWPR1q4/scene.splinecode');
+      app.load('../../../assets/scene.splinecode')
     }
 
     setTimeout(() => {
