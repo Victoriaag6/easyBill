@@ -33,7 +33,7 @@ export class MainComponent implements AfterViewInit {
     }
 
     setTimeout(() => {
-      this.isLoadingCanvas = false; // Set isLoading to false after 5 seconds
+      this.isLoadingCanvas = false; 
     }, 500);
   }
 }
