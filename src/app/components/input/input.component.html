@@ -2,6 +2,18 @@
   <label [for]="id" class="text-blue-input text-sm font-normal font-Poppins">{{
     title
   }}</label>
+
+  @if(type === 'select'){
+  <select
+    [id]="id"
+    [value]="selectOption"
+    class="px-3 py-2 placeholder:font-light placeholder:text-gray-500 rounded-xl border-gray-200 border focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 ease-in-out"
+  >
+    @for(option of options; track option.id){
+    <option [value]="option?.value">{{ option?.label }}</option>
+    }
+  </select>
+  }@else{
   <input
     [id]="id"
     [type]="type"
@@ -9,4 +21,5 @@
     [value]="value"
     class="px-3 py-2 placeholder:font-light placeholder:text-gray-500 rounded-xl border-gray-200 border focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 ease-in-out"
   />
+  }
 </div>

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { InputTypes, InputValues } from '../../../types';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { InputTypes, InputValues, SelectTypes } from '../../../types';
 
 @Component({
   selector: 'app-input',
@@ -14,4 +14,17 @@ export class InputComponent {
   @Input() value: InputValues = '';
   @Input() title = 'Este es el titulo del input';
   @Input() id: string | number = '';
+  @Input() options: Array<SelectTypes> = [];
+
+  selectOption: string | number | undefined;
+
+  ngOnInit() {
+    this.selectOption = this.options[0]?.value;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['options']) {
+      this.selectOption = this.options[0]?.value;
+    }
+  }
 }
