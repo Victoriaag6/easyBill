@@ -4,14 +4,19 @@ import { InputComponent } from '../../components/input/input.component';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { RoutesNavigation } from '../../../enums';
+import { SelectTypes } from '../../../types';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [EasyLogoComponent, InputComponent, RouterModule, ButtonComponent],
-  templateUrl: './login.component.html',
-  styles: ``
+  templateUrl: './register.component.html',
+  styles: ``,
 })
-export class LoginComponent {
-  routes = RoutesNavigation
+export class RegisterComponent {
+  routes = RoutesNavigation;
+  optionsDocument: SelectTypes[] = [
+    { value: 'a', label: 'V' },
+    { value: 'b', label: 'E' },
+  ];
 }
