@@ -27,4 +27,13 @@ export class InputComponent {
       this.selectOption = this.options[0]?.value;
     }
   }
+
+  clearInput(){
+    this.value = '';
+  }
+
+  handleInput(event: Event): void {
+    this.value = (event.target as HTMLInputElement).value;
+  }
+  
 }

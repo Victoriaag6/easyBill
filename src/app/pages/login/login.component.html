@@ -12,18 +12,18 @@
       </div>
 
       <div class="my-4">
-        <form class="flex flex-col gap-3">
+        <form class="flex flex-col gap-3" (submit)="login($event)">
           <app-input
             type="email"
             placeholder="mail@simmmple.com"
             title="Email*"
-            id="inputEmail"
+            id="email"
           />
           <app-input
             type="password"
             placeholder="12345678"
             title="Password*"
-            id="inputPass"
+            id="password"
           />
 
           <a

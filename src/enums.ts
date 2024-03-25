@@ -1,11 +1,12 @@
 export enum RoutesNavigation {
-  mainOutside = "/",
+  mainOutside = '/',
   main = '',
   login = 'login',
   register = 'register',
 }
 
-export enum URLS{
-  URL_BASE = 'https://pokeapi.co/api/v2',
-  URL_DATA = "/pokemon"
+export enum URLS {
+  URL_BASE = 'https://easybill-api-prod-2.onrender.com',
+  URL_LOGIN = '/api/auth/login',
+  URL_REGISTER = '/api/auth/register'
 }

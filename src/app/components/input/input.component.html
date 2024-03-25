@@ -8,18 +8,26 @@
     [id]="id"
     [value]="selectOption"
     class="px-3 py-2 placeholder:font-light placeholder:text-gray-500 rounded-xl border-gray-200 border focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 ease-in-out text-center text-gray-500"
+    [name]="id"
   >
     @for(option of options; track option.id){
     <option [value]="option?.value">{{ option?.label }}</option>
     }
   </select>
   }@else{
-  <input
-    [id]="id"
-    [type]="type"
-    [placeholder]="placeholder"
-    [value]="value"
-    class="px-3 py-2 placeholder:font-light placeholder:text-gray-500 rounded-xl border-gray-200 border focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 ease-in-out"
-  />
+  <div class="relative">
+    <input
+      [name]="id"
+      [id]="id"
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      class="px-3 py-2 w-full placeholder:font-light placeholder:text-gray-500 rounded-xl border-gray-200 border focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 ease-in-out"
+      (input)="handleInput($event)"
+    />
+    <button class="absolute right-0 top-0 mt-2 mr-2" type="button" (click)="clearInput()">
+      x
+    </button>
+  </div>
   }
 </div>
