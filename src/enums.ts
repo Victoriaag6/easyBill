@@ -5,3 +5,7 @@ export enum RoutesNavigation {
   register = 'register',
 }
 
+export enum URLS{
+  URL_BASE = 'https://pokeapi.co/api/v2',
+  URL_DATA = "/pokemon"
+}
