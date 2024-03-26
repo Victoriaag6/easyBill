@@ -1,17 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { LogoComponent } from '../logo/logo.component';
+import { ButtonComponent } from '../button/button.component';
+import { RoutesNavbar } from '../../../constants';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { filter } from 'rxjs';
 
 
 @Component({
   selector: 'easy-sidebar',
   standalone: true,
-  imports: [NzMenuModule],
+  imports: [NzMenuModule, LogoComponent, ButtonComponent, RouterModule],
   templateUrl: './easy-sidebar.component.html',
   styles: `
   [nz-menu] {
     width: 240px;
   }`
 })
-export class EasySidebarComponent {
+export class EasySidebarComponent implements OnInit {
+  routes = RoutesNavbar;
+  currentUrl: string = '';
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.currentUrl = this.router.url.slice(1); 
+  }
+
+  isSelected(routePath: string): boolean {
+    return this.currentUrl === routePath;
+  }
 }

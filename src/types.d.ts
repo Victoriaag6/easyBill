@@ -1,3 +1,5 @@
+import { RoutesNavigation } from "./enums";
+
 export type ButtonTypes = 'primary' | 'secondary';
 
 export type InputTypes = 'text' | 'password' | 'email' | 'number' | 'select';
@@ -38,3 +40,8 @@ export interface LoginResponseError {
 }
 
 export type RegisterResponse = Omit<LoginResponse, 'token'>;
+
+export interface SidebarRoutes{
+  title: string,
+  path: RoutesNavigation,
+}
