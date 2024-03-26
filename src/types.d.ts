@@ -17,7 +17,7 @@ export interface FetchOptions {
   headers?: any;
 }
 
-export interface LoginInputs{
+export interface LoginInputs {
   email: string;
   password: string;
 }
@@ -36,3 +36,5 @@ export interface LoginResponseError {
     code: number | string;
   };
 }
+
+export type RegisterResponse = Omit<LoginResponse, 'token'>;

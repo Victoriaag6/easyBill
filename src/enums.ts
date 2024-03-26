@@ -2,7 +2,10 @@ export enum RoutesNavigation {
   mainOutside = '/',
   main = '',
   login = 'login',
+  loginOutside = `/${RoutesNavigation.login}`,
   register = 'register',
+  dashboard = 'dashboard',
+  dashboardOutside = `/${RoutesNavigation.dashboard}`,
 }
 
 export enum URLS {
