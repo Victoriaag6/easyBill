@@ -1,10 +1,12 @@
-@if(!nonSidebar.includes(router.url)  ){
- <!-- Aqui colocaremos el sidebar -->
- <p>Hola mundo</p>
-}
-
-<div class="w-full h-screen flex-col flex justify-between box-border">
-  <router-outlet />
-  <app-footer class="absolute self-center bottom-0 py-3"/>
+<div class="w-full h-screen flex flex-col justify-between box-border">
+  <div class="flex-grow flex">
+    @if(!nonSidebar.includes(router.url) ){
+    <!-- Aqui colocaremos el sidebar -->
+    <easy-sidebar class="w-64 flex-shrink-0"/>
+    }
+    <div class="flex-grow">
+      <router-outlet />
+    </div>
+  </div>
+  <app-footer class="absolute bottom-0 self-center py-3" />
 </div>
-

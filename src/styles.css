@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=DM%20Sans");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+
+@import "../node_modules/ng-zorro-antd/style/index.min.css"; /* Import base styles */
+@import "../node_modules/ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
