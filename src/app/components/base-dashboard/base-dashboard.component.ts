@@ -14,7 +14,7 @@ export class BaseDashboardComponent {
   @Input() userName: string = 'Enmanuel Colina'
   @Input() srcAvatar = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg/640px-Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
   
-  @Input() background: string = 'white'
+  @Input() background: string = 'blue-500'
 
   getBackgroundColor = () => `bg-${this.background}`
 }

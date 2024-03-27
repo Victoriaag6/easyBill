@@ -38,7 +38,6 @@ export class LoginComponent {
 
     this.responseLogin = response;
 
-    console.log(this.responseLogin);
     if (!this.responseLogin || 'error' in this.responseLogin) {
       ModalsCustoms.error({ text: 'No se ha logueado' });
     } else {
