@@ -1,19 +1,22 @@
-<section class="w-full h-full min-h-screen flex flex-col">
-<div class="flex pt-3 items-center">
-    <div class="flex flex-col w-3/4 ">
-        <app-breadcrumb/>
-        <h1 class="text-2xl text-blue-input font-Poppins font-extrabold">Main Dashboard</h1>
+<section class="w-full h-full min-h-screen flex flex-col p-4" [ngClass]="getBackgroundColor()">
+  <div class="flex pt-3 items-center">
+    <div class="flex flex-col w-3/4">
+      <app-breadcrumb />
+      <h1 class="text-2xl text-blue-input font-Poppins font-extrabold">
+        {{ title }}
+      </h1>
     </div>
 
     <div class="w-1/4 flex gap-4 h-full items-center justify-end mx-4">
-        <p class="text-sm font-bold font-Poppins text-blue-input">Enmanuel Colina</p>
-        <img src="" alt="#">
+      <p class="text-sm font-bold font-Poppins text-blue-input">
+        {{ userName }}
+      </p>
+      <img [src]="srcAvatar" alt="Image of" class="aspect-square max-h-[50px] rounded-xl" />
     </div>
-</div>
+  </div>
 
-
-<div>
+  <div class="my-4">
     <!-- //Contenido que pase -->
     <ng-content></ng-content>
-</div>
+  </div>
 </section>

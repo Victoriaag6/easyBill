@@ -7,8 +7,9 @@
   </div>
 
   @for(route of routes; track route.title){
-  <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzSelected]="isSelected(route.path)">
+  <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzSelected]="isSelected(route.path)" >
     <a [routerLink]="route.path">
+      
       <span class="font-Poppins font-semibold text-blue-input block">{{
         route.title
       }}</span></a

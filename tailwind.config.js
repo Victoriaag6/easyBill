@@ -7,6 +7,7 @@ module.exports = {
         "easy-blue": "#4318FF",
         "easy-words": "#B3B7FA",
         "blue-input": "#2B3674",
+        "dashboard": "#F4F7FE",
       },
       backgroundImage: {
         "gradient-easy": "linear-gradient(to top, #4318FF, #868CFF)",

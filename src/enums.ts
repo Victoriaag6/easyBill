@@ -13,3 +13,7 @@ export enum URLS {
   URL_LOGIN = '/api/auth/login',
   URL_REGISTER = '/api/auth/register'
 }
+
+export enum IconsCards{
+  customers = 'customers'
+}
