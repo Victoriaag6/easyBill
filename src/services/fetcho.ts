@@ -24,7 +24,7 @@ const fetcho = async ({ url, method, body, headers = '' }: FetchOptions) => {
 
     const response = await fetch(`${URLS.URL_BASE}${url}`, config);
 
-    if (!response.ok) throw new Error('Error en la peticion');
+    if (!response.ok) return false;
 
     const data = await response.json();
 

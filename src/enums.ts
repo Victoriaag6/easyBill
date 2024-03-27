@@ -17,3 +17,13 @@ export enum URLS {
 export enum IconsCards{
   customers = 'customers'
 }
+
+export enum Currencys{
+  USD = 'USD',
+  VES = 'VES'
+}
+
+export enum SymbolCurrency{
+  USD = '$',
+  VES = 'Bs'
+}

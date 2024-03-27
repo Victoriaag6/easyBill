@@ -1,0 +1,12 @@
+<div class="w-full h-full flex flex-col gap-8">
+    
+    <div class="flex top h-4 bg-white w-full">
+        <h2 class="w-full h-12">Recent Bills</h2>
+    </div>
+
+    <div class="h-full overflow-y-auto flex flex-col gap-6">
+        @for(bill of recentBills; track bill.personName){
+            <item-bill  [personName]="bill.personName" [valueInDolars]="+bill.valueInDolars" [lastTime]="bill.timeAgo" />
+            }
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { RoutesNavigation } from "./enums";
+import { RoutesNavigation } from './enums';
 
 export type ButtonTypes = 'primary' | 'secondary';
 
@@ -41,7 +41,18 @@ export interface LoginResponseError {
 
 export type RegisterResponse = Omit<LoginResponse, 'token'>;
 
-export interface SidebarRoutes{
-  title: string,
-  path: RoutesNavigation,
+export interface SidebarRoutes {
+  title: string;
+  path: RoutesNavigation;
+}
+
+export type Currency = 'USD' | 'VES';
+
+export type TimeAgoTime = `${number}s` | `${number}m` | `${number}h`
+
+export interface RecentBill{
+  srcImage?: string,
+  personName: string,
+  valueInDolars: number,
+  timeAgo: TimeAgoTime
 }
