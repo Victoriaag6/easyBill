@@ -1,6 +1,6 @@
 import { Token } from '@angular/compiler';
 import { RoutesNavigation } from './enums';
-import { SidebarRoutes } from './types';
+import { SelectTypes, SidebarRoutes } from './types';
 
 export const nonSidebar = [
   RoutesNavigation.login,
@@ -16,15 +16,12 @@ export const RoutesNavbar: Array<SidebarRoutes> = [
     path: RoutesNavigation.dashboard,
   },
   {
-    title: 'Main',
-    path: RoutesNavigation.main,
+    title: 'Generate Bill',
+    path: RoutesNavigation.generateBill,
   },
-  {
-    title: 'Login',
-    path: RoutesNavigation.login,
-  },
-  {
-    title: 'Register',
-    path: RoutesNavigation.register,
-  }
-]
+];
+
+export const OptionsDocument: Array<SelectTypes> = [
+  { value: '65f9a57a37ca727ace69f4c9', label: 'V' },
+  { value: 'b', label: 'E' },
+];

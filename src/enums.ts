@@ -6,12 +6,15 @@ export enum RoutesNavigation {
   register = 'register',
   dashboard = 'dashboard',
   dashboardOutside = `/${RoutesNavigation.dashboard}`,
+  generateBill = 'generate-bill',
+  generateBillOutside = `/${RoutesNavigation.generateBill}`,
 }
 
 export enum URLS {
   URL_BASE = 'https://easybill-api-prod-2.onrender.com',
   URL_LOGIN = '/api/auth/login',
-  URL_REGISTER = '/api/auth/register'
+  URL_REGISTER = '/api/auth/register',
+  URL_ADD_CUSTOMER = '/api/customer/add',
 }
 
 export enum IconsCards{

@@ -3,7 +3,8 @@ export default function getBreadcrumbs({ url }: { url: string }): string[] {
   let urlSegments = url.split('/');
   for (let i = 1; i < urlSegments.length; i++) {
     let breadcrumb = urlSegments[i];
-    breadcrumb = breadcrumb.charAt(0).toUpperCase() + breadcrumb.slice(1);
+    breadcrumb = breadcrumb.replace(/-/g, ' ');
+    breadcrumb = breadcrumb.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     breadcrumbs.push(breadcrumb);
   }
   return breadcrumbs;

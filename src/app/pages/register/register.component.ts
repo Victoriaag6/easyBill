@@ -11,8 +11,8 @@ import {
 } from '../../../types';
 import { obtainDataForm } from '../../../services/obtainDataForm';
 import fetcho from '../../../services/fetcho';
-import Swal from 'sweetalert2';
 import ModalsCustoms from '../../../utility_components/Modals';
+import { OptionsDocument } from '../../../constants';
 
 @Component({
   selector: 'app-register',
@@ -25,12 +25,11 @@ export class RegisterComponent {
   constructor(private router: Router) {}
 
   routes = RoutesNavigation;
-  optionsDocument: SelectTypes[] = [
-    { value: '65f9a57a37ca727ace69f4c9', label: 'V' },
-    { value: 'b', label: 'E' },
-  ];
 
-  valorInputs: any = null; //<! Aqui hay que cambiar el tipo de dato
+  //TODO: Esto hay que sacarlo directamente al hacer el fetch, o ponerlo en constantes
+  optionsDocument = OptionsDocument
+
+  valorInputs: any = null; //TODO: Aqui hay que cambiar el tipo de dato
   responseRegister: LoginResponseError | RegisterResponse | null = null;
 
   handleSubmit = (e: Event) => (this.valorInputs = obtainDataForm(e));

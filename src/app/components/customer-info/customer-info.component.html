@@ -1,0 +1,16 @@
+<base-card-action title="Customer Info">
+  <form class="flex flex-col h-full gap-4" (submit)="addCustomer($event)">
+    <div class="flex gap-5">
+        <app-input class="w-3/12" type="select" [options]="optionsDocument" title="Type Document" id="typeDocument"/>
+        <app-input class="w-4/12" title="Document" placeholder="28561222" id="document"/>
+        <app-input class="w-5/12" title="Full Name" placeholder="Lionel Messi" id="fullName"/>
+    </div>
+
+    <div class="flex gap-5">
+        <app-input class="w-1/3" type="number" title="Phone Number" placeholder="04121704005" id="phoneNumber"/>
+        <app-input class="w-2/3" type="text" id="address" placeholder="123 Main Street Anytown, USA 12345." title="Address"/>
+    </div>
+
+    <app-button content="Add Customer" class="w-2/3 mx-auto"/>
+  </form>
+</base-card-action>
