@@ -1,0 +1,24 @@
+<div class="w-full flex gap-2">
+
+  <div class="flex w-3/12 items-center justify-center">
+    <img [src]="actualPayment?.srcImage" class="w-6 aspect-square rounded-lg"/>
+  </div>
+
+  <select
+  class="w-7/12 border-gray-400 py-3 px-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md shadow-sm border"
+  [id]="id"
+  [name]="id"
+  (change)="updatePayment($event)"
+>
+    @for(paymentMethod of paymentsMethods; track paymentMethod.titlePayment){
+    <option [value]="paymentMethod.titlePayment" class="flex">
+      {{ paymentMethod.titlePayment }}
+    </option>
+    }
+  </select>
+
+  <div class="flex flex-col w-2/12 items-center">
+    <label class="font-Poppins font-semibold">Currency</label>
+    <p>{{ actualPayment?.currency }}</p>
+  </div>
+</div>

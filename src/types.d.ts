@@ -56,3 +56,10 @@ export interface RecentBill{
   valueInDolars: number,
   timeAgo: TimeAgoTime
 }
+
+export interface PaymentsInterface{
+  srcImage: string,
+  titlePayment: string,
+  valuePayment: string,
+  currency: Currency,
+}
