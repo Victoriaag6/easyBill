@@ -19,6 +19,10 @@ export const RoutesNavbar: Array<SidebarRoutes> = [
     title: 'Generate Bill',
     path: RoutesNavigation.generateBill,
   },
+  {
+    title: 'Profile',
+    path: RoutesNavigation.profile,
+  },
 ];
 
 export const OptionsDocument: Array<SelectTypes> = [

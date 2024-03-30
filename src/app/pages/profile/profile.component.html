@@ -1,0 +1,38 @@
+<base-dashboard title="Generate Bill" userName="enmarcm">
+  <div class="w-full h-full">
+    <div
+      class="min-h-72 max-h-full bg-white rounded-md shadow-md p-4 flex flex-col gap-4 relative"
+    >
+      <div
+        class="h-2/12 min-h-24 w-full rounded-3xl bg-violet-700 flex flex-col items-start justify-center p-4 shadow-md"
+      >
+        <h2 class="font-Poppins text-lg text-white font-bold ms-6">
+          {{ profileType }}
+        </h2>
+      </div>
+      <div class="flex-grow w-full min-h-10/12 max-h-full">
+        <div class="w-full flex flex-col items-start h-full gap-6 my-7">
+          @for(data of dataProfile; track data.label){
+          <item-profile
+            [label]="data.label"
+            [value]="data.value"
+            class="w-full"
+          />
+          }
+        </div>
+      </div>
+
+      <div
+        class="absolute lg:w-1/5 right-0 h-full top-0 me-3 px-4 py-8 md:w-1/3 flex flex-col justify-between"
+      >
+        <img
+          [src]="srcImage"
+          alt="Image de "
+          class="aspect-square w-full rounded-full shadow-lg backdrop-blur-sm"
+        />
+
+        <app-button content="Edit" />
+      </div>
+    </div>
+  </div>
+</base-dashboard>

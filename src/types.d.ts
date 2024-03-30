@@ -1,4 +1,4 @@
-import { RoutesNavigation } from './enums';
+import { ProfileTypeEnum, RoutesNavigation } from './enums';
 
 export type ButtonTypes = 'primary' | 'secondary';
 
@@ -63,3 +63,11 @@ export interface PaymentsInterface{
   valuePayment: string,
   currency: Currency,
 }
+
+export interface ProfileInfo{
+  type?: string,
+  label: string,
+  value: string
+}
+
+export type ProfileType = 'admin' | 'cashier';

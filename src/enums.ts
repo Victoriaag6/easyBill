@@ -8,6 +8,8 @@ export enum RoutesNavigation {
   dashboardOutside = `/${RoutesNavigation.dashboard}`,
   generateBill = 'generate-bill',
   generateBillOutside = `/${RoutesNavigation.generateBill}`,
+  profile = 'profile',
+  profileOutside = `/${RoutesNavigation.profile}`,
 }
 
 export enum URLS {
@@ -29,4 +31,9 @@ export enum Currencys{
 export enum SymbolCurrency{
   USD = '$',
   VES = 'Bs'
+}
+
+export enum ProfileTypeEnum{
+  cashier = 'cashier',
+  admin = 'admin'
 }
