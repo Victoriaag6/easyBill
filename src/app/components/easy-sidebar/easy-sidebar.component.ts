@@ -3,8 +3,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { LogoComponent } from '../logo/logo.component';
 import { ButtonComponent } from '../button/button.component';
 import { RoutesNavbar } from '../../../constants';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { filter } from 'rxjs';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -20,6 +19,7 @@ import { filter } from 'rxjs';
 export class EasySidebarComponent implements OnInit {
   routes = RoutesNavbar;
   currentUrl: string = '';
+  isCollapsed = false
 
   constructor(private router: Router) {}
 
@@ -29,5 +29,9 @@ export class EasySidebarComponent implements OnInit {
 
   isSelected(routePath: string): boolean {
     return this.currentUrl === routePath;
+  }
+
+  toggleSidebar(){
+    this.isCollapsed = !this.isCollapsed
   }
 }
