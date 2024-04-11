@@ -13,7 +13,7 @@ export enum RoutesNavigation {
 }
 
 export enum URLS {
-  URL_BASE = 'https://easybill-api-prod-2.onrender.com',
+  URL_BASE = 'https://easybill-api-dev-nhct.1.us-1.fl0.io',
   URL_LOGIN = '/api/auth/login',
   URL_REGISTER = '/api/auth/register',
   URL_ADD_CUSTOMER = '/api/customer/add',
