@@ -17,7 +17,7 @@ export class BillSummaryComponent {
 
   date: string = this.getCurrentDate();
   time: string = this.getCurrentTime();
-  billInfoLabels: Array<string> = ['customer', 'date', 'time'];
+  billInfoLabels: Array<string> = ['customer', 'date', 'time','bill subtotal','bill total taxes','bill total','remaining'];
   billInfoValues: Array<string> = [this.customerName, this.date, this.time];
   handleCancelBill(){
     this.billDeleted.emit();
