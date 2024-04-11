@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'bill-labels',
+  selector: 'bill-info',
   standalone: true,
   imports: [],
-  templateUrl: './bill-labels.component.html',
+  templateUrl: './bill-info.component.html',
   styles: ``
 })
-export class BillLabelsComponent {
+export class BillInfoComponent {
 
 }
