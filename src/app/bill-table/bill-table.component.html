@@ -1,7 +1,12 @@
 <div class="w-full h-full">
-  <div class="flex w-full gap-2 box-content justify-center bg-black">
+  <div class="flex w-full gap-2 box-content justify-center backdrop-blur-md my-4">
     @for(item of items; track item.name){
     <item-header-table-bill [content]="item.name" [class]="item.width" />
+    }
+  </div>
+  <div class="flex w-full box-content justify-center flex-col items-center gap-4">
+    @for(item of itemsTable; track item.description){
+    <item-table-bill [item]="upNumber()" [sku]="item.sku" [description]="item.description" [price]="item.price" [ammount]="item.ammount" [tax]="item.tax" [total]="item.total" class="w-full"/>
     }
   </div>
 </div>
