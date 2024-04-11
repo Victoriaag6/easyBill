@@ -14,9 +14,14 @@ import { BillSummaryComponent } from '../../components/bill-summary/bill-summary
 })
 export class GenerateBillComponent {
   isCustomerAdded: boolean = false;
+  billCustomer: string = '';
 
-  handleCustomerAdded(): void {
+  handleCustomerAdded(event: any): void {
     this.isCustomerAdded = true;
+    this.billCustomer = event;
   }
 
+  handleBillDeleted(): void {
+    this.isCustomerAdded = false;
+  }
 }

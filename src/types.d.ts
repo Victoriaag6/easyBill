@@ -79,3 +79,13 @@ export interface ProfileInfo{
 }
 
 export type ProfileType = 'admin' | 'cashier';
+
+export interface ItemTableComponent{
+  item?: number;
+  sku: string;
+  description: string;
+  price: number;
+  ammount: number;
+  tax: number;
+  total: number;
+}
