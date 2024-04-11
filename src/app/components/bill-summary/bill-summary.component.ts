@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { BaseCardActionComponent } from '../base-card-action/base-card-action.component';
 import { ButtonComponent } from '../button/button.component';
 import { BillInfoComponent } from '../bill-info/bill-info.component';
@@ -12,13 +12,13 @@ import { BillTableComponent } from '../../bill-table/bill-table.component';
   styles: ``
 })
 export class BillSummaryComponent {
-  date: string = this.getCurrentDate();
-  time: string = this.getCurrentTime();
-  billInfoLabels: Array<string> = ['customer', 'date', 'time'];
-  billInfoValues: Array<string> = ['John Doe', this.date, this.time];
-
+  @Input() customerName!: string;
   @Output() billDeleted: EventEmitter<void> = new EventEmitter<void>();
 
+  date: string = this.getCurrentDate();
+  time: string = this.getCurrentTime();
+  billInfoLabels: Array<string> = ['customer', 'date', 'time','bill subtotal','bill total taxes','bill total','remaining'];
+  billInfoValues: Array<string> = [this.customerName, this.date, this.time];
   handleCancelBill(){
     this.billDeleted.emit();
   }

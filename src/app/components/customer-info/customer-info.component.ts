@@ -54,7 +54,8 @@ export class CustomerInfoComponent {
   // }
 
   addCustomer(e: Event) {
+    this.handleSubmit(e)
     e.preventDefault()
-    this.customerAdded.emit();
+    this.customerAdded.emit(this.valorInputs.fullName);
   }
 }
