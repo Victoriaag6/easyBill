@@ -19,4 +19,7 @@ export class GenerateBillComponent {
     this.isCustomerAdded = true;
   }
 
+  handleBillDeleted(): void {
+    this.isCustomerAdded = false;
+  }
 }
