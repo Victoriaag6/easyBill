@@ -54,6 +54,7 @@ export class CustomerInfoComponent {
   // }
 
   addCustomer(e: Event) {
+    e.preventDefault()
     this.customerAdded.emit();
   }
 }

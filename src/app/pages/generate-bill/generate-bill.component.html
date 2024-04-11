@@ -1,10 +1,22 @@
 <base-dashboard title="Generate Bill" userName="enmarcm">
-    <div class="grid grid-cols-2 grid-rows-2 gap-0 w-full h-full bg-white p-4 rounded-md shadow-md">
-        <div class="col-start-1 col-end-2 row-start-1 row-end-2">
-            <customer-info (customerAdded)="handleCustomerAdded()" />
-        </div>
-        <div class="col-start-1 col-end-2 row-start-2 row-end-3"><add-payments/></div>
-        <div *ngIf="!isCustomerAdded" class="col-start-2 col-end-3 row-start-1 row-end-3">Add a customer to start a new bill</div>
-        <div *ngIf="isCustomerAdded" class="col-start-2 col-end-3 row-start-1 row-end-3"><app-bill-summary /></div>
+  <div
+    class="grid grid-cols-2 grid-rows-2 gap-0 w-full h-full bg-white p-4 rounded-md shadow-md"
+  >
+    <div class="col-start-1 col-end-2 row-start-1 row-end-2">
+      <customer-info (customerAdded)="handleCustomerAdded()" />
     </div>
+    <div class="col-start-1 col-end-2 row-start-2 row-end-3">
+      <add-payments />
+    </div>
+    @if(!isCustomerAdded){
+    <div class="col-start-2 col-end-3 row-start-1 row-end-3">
+      Add a customer to start a new bill
+    </div>
+    } @if(isCustomerAdded){
+    <div class="col-start-2 col-end-3 row-start-1 row-end-3">
+      <app-bill-summary />
+    </div>
+
+    }
+  </div>
 </base-dashboard>
