@@ -11,5 +11,7 @@ import { BillInfoComponent } from '../bill-info/bill-info.component';
   styles: ``
 })
 export class BillSummaryComponent {
+  billInfoLabels: Array<string> = ['customer', 'date', 'time'];
+  billInfoValues: Array<string> = ['John Doe', '12/12/2012', '12:00 PM'];
 
 }

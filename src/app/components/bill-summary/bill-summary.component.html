@@ -1,5 +1,9 @@
 <base-card-action title="Bill Summary">
-<h4>bill number: 27</h4>
-<app-button content="Cancel" class="w-2/3 mx-auto"></app-button>
-<bill-info></bill-info>
+  <h4>bill number: 27</h4>
+  <app-button content="Cancel" class="w-2/3 mx-auto"></app-button>
+  <div>
+    <bill-info [label]="billInfoLabels[0]" [value]="billInfoValues[0]"></bill-info>
+    <bill-info [label]="billInfoLabels[1]" [value]="billInfoValues[1]"></bill-info>
+    <bill-info [label]="billInfoLabels[2]" [value]="billInfoValues[2]"></bill-info>
+  </div>
 </base-card-action>
