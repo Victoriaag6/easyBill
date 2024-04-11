@@ -6,7 +6,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GenerateBillComponent } from './pages/generate-bill/generate-bill.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-
+import { reportsComponent } from './pages/reports/reports.component';
 export const routes: Routes = [
     {
         path: RoutesNavigation.main,
@@ -31,5 +31,10 @@ export const routes: Routes = [
     {
         path: RoutesNavigation.profile,
         component: ProfileComponent
+    }
+    ,
+    {
+        path: RoutesNavigation.reports,
+        component: reportsComponent
     }
 ];

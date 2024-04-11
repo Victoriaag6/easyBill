@@ -23,6 +23,10 @@ export const RoutesNavbar: Array<SidebarRoutes> = [
     title: 'Profile',
     path: RoutesNavigation.profile,
   },
+  {
+    title: 'Reports',
+    path: RoutesNavigation.reports,
+  },
 ];
 
 export const OptionsDocument: Array<SelectTypes> = [

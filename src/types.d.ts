@@ -57,6 +57,14 @@ export interface RecentBill{
   timeAgo: TimeAgoTime
 }
 
+export interface ItemReport{
+  code: number,
+  bill: number,
+  product: string,
+  price: number
+
+}
+
 export interface PaymentsInterface{
   srcImage: string,
   titlePayment: string,

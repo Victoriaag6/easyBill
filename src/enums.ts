@@ -10,6 +10,8 @@ export enum RoutesNavigation {
   generateBillOutside = `/${RoutesNavigation.generateBill}`,
   profile = 'profile',
   profileOutside = `/${RoutesNavigation.profile}`,
+  reports = 'reports',
+  reportsOutside = `/${RoutesNavigation.reports}`,
 }
 
 export enum URLS {
