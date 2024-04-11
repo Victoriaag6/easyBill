@@ -18,17 +18,7 @@ import { LogoComponent } from '../../components/logo/logo.component';
   imports: [ButtonComponent, LogoComponent],
   standalone: true,
 })
-export class MainComponent implements AfterViewInit {
-  @ViewChild('canvas3d') canvas3d: any;
+export class MainComponent {
   routes = RoutesNavigation;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const app = new Application(this.canvas3d.nativeElement);
-      // app.load('https://prod.spline.design/5PTlTfYEOzWPR1q4/scene.splinecode');
-      app.load('../../../assets/scene.splinecode');
-    }
-  }
 }

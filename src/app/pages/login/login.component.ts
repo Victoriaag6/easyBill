@@ -29,21 +29,26 @@ export class LoginComponent {
   handleSubmit = (e: Event) => (this.valorInputs = obtainDataForm(e));
 
   async login(e: Event) {
-    this.handleSubmit(e);
-    const response = await fetcho({
-      url: URLS.URL_LOGIN,
-      method: 'POST',
-      body: this.valorInputs,
-    });
-
-    this.responseLogin = response;
-
-    if (!this.responseLogin || 'error' in this.responseLogin) {
-      ModalsCustoms.error({ text: 'No se ha logueado' });
-    } else {
-      LocalChanges.setItem('token', this.responseLogin.token);
-      ModalsCustoms.success({ text: 'Se ha logueado correctamente' });
-      this.router.navigate([RoutesNavigation.dashboardOutside]);
-    }
+    ModalsCustoms.success({ text: 'Se ha logueado correctamente' });
+    this.router.navigate([RoutesNavigation.dashboardOutside]);
   }
+
+  // async login(e: Event) {
+  //   this.handleSubmit(e);
+  //   const response = await fetcho({
+  //     url: URLS.URL_LOGIN,
+  //     method: 'POST',
+  //     body: this.valorInputs,
+  //   });
+
+  //   this.responseLogin = response;
+
+  //   if (!this.responseLogin || 'error' in this.responseLogin) {
+  //     ModalsCustoms.error({ text: 'No se ha logueado' });
+  //   } else {
+  //     LocalChanges.setItem('token', this.responseLogin.token);
+  //     ModalsCustoms.success({ text: 'Se ha logueado correctamente' });
+  //     this.router.navigate([RoutesNavigation.dashboardOutside]);
+  //   }
+  // }
 }
