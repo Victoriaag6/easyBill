@@ -1,9 +1,24 @@
-<base-card-action title="Bill Summary">
-  <h4>bill number: 27</h4>
-  <app-button content="Cancel" class="w-2/3 mx-auto"></app-button>
-  <div>
-    <bill-info [label]="billInfoLabels[0]" [value]="billInfoValues[0]"></bill-info>
-    <bill-info [label]="billInfoLabels[1]" [value]="billInfoValues[1]"></bill-info>
-    <bill-info [label]="billInfoLabels[2]" [value]="billInfoValues[2]"></bill-info>
+<base-card-action title="Bill Summary" class="flex flex-col relative h-full">
+  <div class="absolute right-0 w-2/3 flex top-0 items-end justify-end gap-2">
+    <h4 class="text-sm font-bold font-Poppins w-2/3 text-end">
+      bill number: 27
+    </h4>
+    <app-button content="Cancel" class="w-1/3"></app-button>
   </div>
+  <div class="flex mt-4">
+    <bill-info
+      [label]="billInfoLabels[0]"
+      [value]="billInfoValues[0]"
+    ></bill-info>
+    <bill-info
+      [label]="billInfoLabels[1]"
+      [value]="billInfoValues[1]"
+    ></bill-info>
+    <bill-info
+      [label]="billInfoLabels[2]"
+      [value]="billInfoValues[2]"
+    ></bill-info>
+  </div>
+
+  <div class="mt-4 flex-grow h-full">restante</div>
 </base-card-action>
