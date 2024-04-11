@@ -2,11 +2,12 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { BaseCardActionComponent } from '../base-card-action/base-card-action.component';
 import { ButtonComponent } from '../button/button.component';
 import { BillInfoComponent } from '../bill-info/bill-info.component';
+import { BillTableComponent } from '../../bill-table/bill-table.component';
 
 @Component({
   selector: 'app-bill-summary',
   standalone: true,
-  imports : [BaseCardActionComponent, ButtonComponent, BillInfoComponent],
+  imports : [BaseCardActionComponent, ButtonComponent, BillInfoComponent, BillTableComponent],
   templateUrl: './bill-summary.component.html',
   styles: ``
 })
