@@ -9,7 +9,7 @@
   @for(route of routes; track route.title){
   <li nz-menu-item nz-tooltip nzTooltipPlacement="right" [nzSelected]="isSelected(route.path)" >
     <a [routerLink]="route.path">
-      
+
       <span class="font-Poppins font-semibold text-blue-input block">{{
         route.title
       }}</span></a
@@ -19,6 +19,6 @@
   }
 
   <div class="absolute bottom-0 w-full flex items-center justify-center py-3">
-    <app-button content="Logout" class="w-3/4" />
+    <app-button (click)="handleLogOut()" content="Logout" class="w-3/4" />
   </div>
 </ul>

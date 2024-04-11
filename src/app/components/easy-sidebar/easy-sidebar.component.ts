@@ -24,7 +24,7 @@ export class EasySidebarComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.currentUrl = this.router.url.slice(1); 
+    this.currentUrl = this.router.url.slice(1);
   }
 
   isSelected(routePath: string): boolean {
@@ -33,5 +33,10 @@ export class EasySidebarComponent implements OnInit {
 
   toggleSidebar(){
     this.isCollapsed = !this.isCollapsed
+  }
+
+  handleLogOut(){
+    localStorage.clear();
+    return this.router.navigate(['/login']);
   }
 }
